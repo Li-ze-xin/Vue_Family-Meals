@@ -1,0 +1,52 @@
+<template>
+  <div class="list">
+    <ul class="top">
+      <router-link to="/list/page/1">1</router-link>
+      <router-link to="/list/page/2">2</router-link>
+      <router-link to="/list/page/3">3</router-link>
+      <router-link to="/list/page/4">4</router-link>
+      <router-link to="/list/page/5">5</router-link>
+      <router-link to="/list/page/aaa">aaa</router-link>
+    </ul>
+    <div class="bottom">
+      <router-view></router-view>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'first-com',
+  data () {
+    return {
+      message: '我是 List 组件'
+    }
+  }
+}
+</script>
+
+<style scoped>
+  .list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list > .top {
+    height: 60px;
+    border: 2px solid #333;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .top > li {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .list > .bottom {
+    flex: 1;
+  }
+</style>
